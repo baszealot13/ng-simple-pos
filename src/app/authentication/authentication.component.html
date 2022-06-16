@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-12 offset-md-4 col-md-4">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" [(ngModel)]="username" placeholder="Username:" autofocus
+                (keyup.enter)="login()">
+            <button class="btn btn-primary" type="button" (click)="login()">Go in</button>
+        </div>
+    </div>
+</div>
+
+<p class="text-center">{{message}}</p>

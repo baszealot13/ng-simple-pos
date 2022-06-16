@@ -1,0 +1,33 @@
+<h1>Hello POS!</h1>
+
+<div class="row">
+    <div class="col-12 col-md-12">
+        <a class="btn btn-outline-primary" routerLink="/pos/create">NEW!</a>
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>...</th>
+            <th>ID</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orders$ | async">
+            <td>
+                <a href="javascript:void(0)" class="btn btn-outline-primary btn-sm">
+                    <i class='bx bxs-file-find'></i>
+                </a>
+            </td>
+            <td>{{order.id}}</td>
+            <td>{{order.qty}}</td>
+            <td>{{order.price | number: '1.0-0'}}</td>
+            <td>{{order.created}}</td>
+        </tr>
+    </tbody>
+</table>
